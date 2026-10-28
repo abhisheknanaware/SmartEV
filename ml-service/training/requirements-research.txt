@@ -1,0 +1,23 @@
+# Research environment for the partial-charging SOH benchmark and the SmartEV battery models.
+# Versions are those installed and used for the reported results (Python 3.13.9, Windows 11).
+# Separate from ml-service/requirements.txt, which serves the FastAPI application.
+#
+# PyTorch is the CUDA 12.8 build used on the GPU (NVIDIA GeForce RTX 5060 Laptop GPU); install it with
+#   pip install torch==2.11.0 --index-url https://download.pytorch.org/whl/cu128
+# or use the CPU wheel (set SOH_DEVICE=cpu). CPU and GPU runs are not bit-identical for the CNNs.
+#
+# External tool (not pip): pandoc 3.8, used only by docs/paper/ieee/build_ieee.py to write the paper.
+
+numpy==2.3.5
+pandas==2.3.3
+pyarrow==21.0.0          # parquet I/O for the master dataset
+scipy==1.16.3
+scikit-learn==1.7.2
+lightgbm==4.6.0
+xgboost==3.3.0           # M3 survival model (training/models)
+torch==2.11.0
+joblib==1.5.3
+py7zr==1.1.3             # extracting VED archives (data_acquisition/extract.py)
+optuna==4.9.0            # tuning in training/models/train_round2.py
+matplotlib==3.10.6       # figures (docs/paper)
+python-docx==1.2.0       # IEEE Word manuscript (docs/paper/ieee/build_ieee.py)

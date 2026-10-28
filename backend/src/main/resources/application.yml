@@ -1,0 +1,72 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: smartev-backend
+  
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://127.0.0.1:5432/smartev}
+    username: ${SPRING_DATASOURCE_USERNAME:smartev_dev}
+    password: ${SPRING_DATASOURCE_PASSWORD:}
+    driver-class-name: ${SPRING_DATASOURCE_DRIVER:org.postgresql.Driver}
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 30000
+      connection-timeout: 30000
+      initialization-fail-timeout: 60000
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  data:
+    redis:
+      host: ${SPRING_DATA_REDIS_HOST:127.0.0.1}
+      port: ${SPRING_DATA_REDIS_PORT:6379}
+      timeout: 2000ms
+
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 6MB
+
+# Secrets come from the environment (JWT_SECRET, RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET).
+# For local development put them in config/application-local.yml (gitignored).
+jwt:
+  secret: ${JWT_SECRET}
+  expirationMs: 86400000
+
+razorpay:
+  key:
+    id: ${RAZORPAY_KEY_ID:}
+    secret: ${RAZORPAY_KEY_SECRET:}
+  # Accept simulated payment signatures. Only ever true in local development.
+  simulation: ${RAZORPAY_SIMULATION:false}
+
+# Station photo uploads (CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET).
+# Left blank, the admin portal falls back to pasting an image URL.
+cloudinary:
+  cloud-name: ${CLOUDINARY_CLOUD_NAME:}
+  api-key: ${CLOUDINARY_API_KEY:}
+  api-secret: ${CLOUDINARY_API_SECRET:}
+
+# Where station photos are stored when Cloudinary is not configured (served at /uploads/**).
+uploads:
+  dir: ${UPLOADS_DIR:./data/uploads}
+
+ai:
+  ml-service-url: ${ML_SERVICE_URL:http://127.0.0.1:8000}
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html

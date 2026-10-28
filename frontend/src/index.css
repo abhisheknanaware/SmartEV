@@ -1,0 +1,278 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "leaflet/dist/leaflet.css";
+
+@layer base {
+  html { -webkit-tap-highlight-color: transparent; }
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans antialiased min-h-screen;
+    font-feature-settings: "cv11", "ss01";
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+  ::selection { background: rgba(31, 220, 197, 0.35); color: inherit; }
+  :focus-visible { outline: 2px solid theme('colors.brand.400'); outline-offset: 2px; }
+
+  input:not([type='checkbox']):not([type='radio']):not([type='range']),
+  select,
+  textarea {
+    @apply transition-[border-color,box-shadow] duration-150;
+  }
+  input:not([type='checkbox']):not([type='radio']):not([type='range']):focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: theme('colors.brand.500');
+    box-shadow: 0 0 0 4px rgba(6, 191, 171, 0.16);
+  }
+}
+
+@layer components {
+  .menu-item {
+    @apply flex items-center gap-2.5 px-3 py-2 rounded-xl text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900 transition-colors;
+  }
+  .popover { animation: popover-in 0.16s ease-out both; transform-origin: top right; }
+}
+
+@keyframes popover-in {
+  from { opacity: 0; transform: translateY(-6px) scale(0.98); }
+}
+
+/* Crisp Light Theme UI Classes */
+.bg-light-page {
+  background-color: #f4f7fb;
+}
+
+.glass-card {
+  background-color: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(51, 65, 85, 0.7);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+}
+
+.glass-card-light {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px -12px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.white-card {
+  background-color: #ffffff;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px -12px rgba(15, 23, 42, 0.12);
+}
+
+.white-card-hover {
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.white-card-hover:hover {
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.05), 0 18px 40px -16px rgba(15, 23, 42, 0.22);
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+/* Teal Accent Navigation */
+.nav-teal {
+  background: linear-gradient(135deg, #06bfab 0%, #057b71 100%);
+  color: #ffffff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Clean, Crisp Leaflet Map */
+.leaflet-container {
+  font-family: inherit;
+  z-index: 10;
+  border-radius: 1rem;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15) !important;
+  padding: 4px !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.leaflet-popup-tip {
+  background: #ffffff !important;
+}
+
+/* Slot button active state */
+.slot-btn-active {
+  background-color: #009a8c !important;
+  border-color: #009a8c !important;
+  color: #ffffff !important;
+}
+
+.slot-btn-active span {
+  color: #ffffff !important;
+}
+
+/* =====================================================================
+   ChargeMate design system (v2): glass surfaces, buttons, gradients
+   ===================================================================== */
+:root {
+  --cm-accent: #1fdcc5;
+  --cm-accent-2: #38bdf8;
+  --cm-ink: #050913;
+  --cm-ease-camera: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.app-light {
+  background:
+    radial-gradient(1200px 600px at 100% -10%, rgba(45, 212, 191, 0.10), transparent 60%),
+    radial-gradient(900px 500px at -10% 10%, rgba(56, 189, 248, 0.10), transparent 60%),
+    #f4f7fb;
+}
+
+.glass {
+  /* No backdrop-filter: over the live 3D canvas it re-blurs every frame and causes scroll jank. */
+  background: rgba(8, 14, 28, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+}
+.glass-strong {
+  background: rgba(6, 11, 22, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 30px 80px -30px rgba(45, 212, 191, 0.35);
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, #53f3db 0%, #38bdf8 55%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-primary,
+.btn-glass {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.3rem;
+  border-radius: 0.9rem;
+  font-weight: 800;
+  font-size: 0.875rem;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-primary {
+  background: linear-gradient(135deg, #53f3db, #38bdf8);
+  color: #04121a;
+  box-shadow: 0 12px 30px -10px rgba(45, 212, 191, 0.7);
+}
+.btn-glass {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.btn-primary:hover, .btn-glass:hover { transform: translateY(-2px); }
+.btn-primary:active, .btn-glass:active { transform: translateY(0) scale(0.98); }
+.btn-primary:focus-visible, .btn-glass:focus-visible { outline: 2px solid #53f3db; outline-offset: 3px; }
+.btn-glass:hover { background: rgba(255, 255, 255, 0.14); }
+
+.stage-fallback {
+  background:
+    radial-gradient(800px 500px at 70% 30%, rgba(45, 212, 191, 0.22), transparent 60%),
+    radial-gradient(700px 500px at 20% 80%, rgba(56, 189, 248, 0.18), transparent 60%),
+    #050913;
+}
+
+.tagline { animation: tagline-in 0.6s ease both; }
+@keyframes tagline-in { from { opacity: 0; transform: translateY(8px); filter: blur(4px); } }
+
+.text-balance { text-wrap: balance; }
+.text-pretty { text-wrap: pretty; }
+
+/* Scroll-driven reveals: decorative progressive enhancement, no fallback needed. */
+@media (prefers-reduced-motion: no-preference) {
+  @supports ((animation-timeline: view()) and (animation-range: entry)) {
+    @keyframes reveal-in {
+      from { opacity: 0; transform: translateY(40px) scale(0.97); }
+    }
+    .reveal {
+      animation: reveal-in auto linear backwards;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+  }
+}
+
+/* =====================================================================
+   Camera transitions between routes (View Transitions API)
+   The navbar is captured separately so it stays put while the page dollies.
+   ===================================================================== */
+.site-nav { view-transition-name: site-nav; }
+.page-stage { view-transition-name: page; }
+
+::view-transition-group(page) { animation-duration: 0.45s; animation-timing-function: var(--cm-ease-camera); }
+::view-transition-old(page),
+::view-transition-new(page) { animation-duration: 0.45s; animation-timing-function: var(--cm-ease-camera); mix-blend-mode: normal; will-change: transform, opacity; }
+
+/* Forward: dolly in, through the old page into the new one. */
+html[data-nav-dir='forward']::view-transition-old(page) { animation-name: cam-push-out; }
+html[data-nav-dir='forward']::view-transition-new(page) { animation-name: cam-push-in; }
+/* Back: pull the camera out. */
+html[data-nav-dir='back']::view-transition-old(page) { animation-name: cam-pull-out; }
+html[data-nav-dir='back']::view-transition-new(page) { animation-name: cam-pull-in; }
+
+/* Transform + opacity only: these run on the compositor. Animating filter: blur() on full-page snapshots caused the stutter. */
+@keyframes cam-push-out { to { opacity: 0; transform: scale(1.05); } }
+@keyframes cam-push-in { from { opacity: 0; transform: scale(0.96) translateY(12px); } }
+@keyframes cam-pull-out { to { opacity: 0; transform: scale(0.96); } }
+@keyframes cam-pull-in { from { opacity: 0; transform: scale(1.04); } }
+
+::view-transition-old(site-nav),
+::view-transition-new(site-nav) { animation-duration: 0.3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+  .tagline { animation: none; }
+  .popover { animation: none; }
+}
+
+/* Dark-surface card used across the Battery AI lab */
+.panel {
+  background: linear-gradient(180deg, rgba(17, 26, 47, 0.9), rgba(10, 17, 34, 0.9));
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 20px 40px -24px rgba(0, 0, 0, 0.6);
+}
+
+/* Printing a booking receipt prints only the receipt, not the page behind its dialog. */
+@media print {
+  body:has(#printable-receipt) > *:not(:has(#printable-receipt)) { display: none !important; }
+  body:has(#printable-receipt) .fixed:has(#printable-receipt) { position: static !important; padding: 0 !important; }
+  body:has(#printable-receipt) .fixed:has(#printable-receipt) > [aria-hidden='true'] { display: none !important; }
+  [role='dialog']:has(#printable-receipt) { max-height: none !important; overflow: visible !important; box-shadow: none !important; max-width: none !important; }
+  [role='dialog']:has(#printable-receipt) > .sticky { display: none !important; }
+}

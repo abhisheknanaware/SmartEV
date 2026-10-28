@@ -1,0 +1,46 @@
+node_modules/
+dist/
+build/
+.env
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.csv
+.idea/
+.vscode/
+target/
+__pycache__/
+*.pyc
+
+# Logs & Runtime Dumps
+*.log
+*.out
+*.err
+*.timestamp-*.mjs
+BOOT-INF/
+backend/boot.*
+backend/*.log
+backend/sources.txt
+backend/data/
+backend/application.yml
+chat_test_out.json
+rag_test_out.json
+rag_results.txt
+
+.env
+.env.*
+!.env.example
+
+
+# Local-only Spring profile with dev DB credentials
+backend/config/application-local.yml
+backend/data/
+
+# Local Git recovery files
+.git_corrupt_backup/
+.git_worktree_pointer_backup
+.claude/
+
+# Windows debug symbols
+*.pdb

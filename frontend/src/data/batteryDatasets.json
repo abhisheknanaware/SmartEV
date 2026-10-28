@@ -1,0 +1,640 @@
+{
+  "calceRecords": [
+    {
+      "id": "CALCE_CS2_33",
+      "name": "CALCE_CS2_33 (CALCE University of Maryland)",
+      "sourceName": "CALCE Laboratory Battery Degradation Dataset (University of Maryland)",
+      "sourceType": "Experimental Laboratory Research Dataset",
+      "sourceDescription": "Controlled laboratory cycle aging tests conducted by CALCE researchers on lithium-ion cells at 25°C ambient temperature.",
+      "chemistry": "LCO",
+      "formFactor": "prismatic",
+      "nominalCapacity": "1.1 Ah",
+      "nominalCapacityNumeric": 1.1,
+      "nominalCapacityUnit": "Ah",
+      "cycleCount": 660,
+      "temperatureC": 25,
+      "voltageV": 3.47,
+      "currentA": 0.55,
+      "resistanceMohm": null,
+      "history": [
+        {
+          "cycle": 1,
+          "soh": 104.6,
+          "measuredCapacityAh": 1.151
+        },
+        {
+          "cycle": 15,
+          "soh": 103.6,
+          "measuredCapacityAh": 1.14
+        },
+        {
+          "cycle": 30,
+          "soh": 102.1,
+          "measuredCapacityAh": 1.123
+        },
+        {
+          "cycle": 45,
+          "soh": 101.6,
+          "measuredCapacityAh": 1.118
+        },
+        {
+          "cycle": 60,
+          "soh": 100.5,
+          "measuredCapacityAh": 1.106
+        },
+        {
+          "cycle": 75,
+          "soh": 100.1,
+          "measuredCapacityAh": 1.101
+        },
+        {
+          "cycle": 90,
+          "soh": 99.4,
+          "measuredCapacityAh": 1.093
+        },
+        {
+          "cycle": 105,
+          "soh": 98.8,
+          "measuredCapacityAh": 1.087
+        },
+        {
+          "cycle": 120,
+          "soh": 99.5,
+          "measuredCapacityAh": 1.094
+        },
+        {
+          "cycle": 135,
+          "soh": 98.5,
+          "measuredCapacityAh": 1.084
+        },
+        {
+          "cycle": 150,
+          "soh": 97.9,
+          "measuredCapacityAh": 1.077
+        },
+        {
+          "cycle": 165,
+          "soh": 98.2,
+          "measuredCapacityAh": 1.08
+        },
+        {
+          "cycle": 180,
+          "soh": 97.9,
+          "measuredCapacityAh": 1.077
+        },
+        {
+          "cycle": 195,
+          "soh": 96.2,
+          "measuredCapacityAh": 1.058
+        },
+        {
+          "cycle": 210,
+          "soh": 96.4,
+          "measuredCapacityAh": 1.061
+        },
+        {
+          "cycle": 225,
+          "soh": 95.5,
+          "measuredCapacityAh": 1.051
+        },
+        {
+          "cycle": 240,
+          "soh": 95.2,
+          "measuredCapacityAh": 1.048
+        },
+        {
+          "cycle": 255,
+          "soh": 94.8,
+          "measuredCapacityAh": 1.043
+        },
+        {
+          "cycle": 270,
+          "soh": 93.9,
+          "measuredCapacityAh": 1.033
+        },
+        {
+          "cycle": 285,
+          "soh": 94.2,
+          "measuredCapacityAh": 1.036
+        },
+        {
+          "cycle": 300,
+          "soh": 93.4,
+          "measuredCapacityAh": 1.028
+        },
+        {
+          "cycle": 315,
+          "soh": 93.4,
+          "measuredCapacityAh": 1.027
+        },
+        {
+          "cycle": 330,
+          "soh": 93,
+          "measuredCapacityAh": 1.023
+        },
+        {
+          "cycle": 345,
+          "soh": 92.2,
+          "measuredCapacityAh": 1.014
+        },
+        {
+          "cycle": 360,
+          "soh": 91.3,
+          "measuredCapacityAh": 1.004
+        },
+        {
+          "cycle": 375,
+          "soh": 90.4,
+          "measuredCapacityAh": 0.994
+        },
+        {
+          "cycle": 390,
+          "soh": 89.4,
+          "measuredCapacityAh": 0.983
+        },
+        {
+          "cycle": 405,
+          "soh": 88.7,
+          "measuredCapacityAh": 0.976
+        },
+        {
+          "cycle": 420,
+          "soh": 85.8,
+          "measuredCapacityAh": 0.944
+        },
+        {
+          "cycle": 435,
+          "soh": 84.2,
+          "measuredCapacityAh": 0.926
+        },
+        {
+          "cycle": 450,
+          "soh": 82.6,
+          "measuredCapacityAh": 0.909
+        },
+        {
+          "cycle": 465,
+          "soh": 81.5,
+          "measuredCapacityAh": 0.896
+        },
+        {
+          "cycle": 480,
+          "soh": 78.8,
+          "measuredCapacityAh": 0.866
+        },
+        {
+          "cycle": 495,
+          "soh": 78.1,
+          "measuredCapacityAh": 0.859
+        },
+        {
+          "cycle": 510,
+          "soh": 78.4,
+          "measuredCapacityAh": 0.863
+        },
+        {
+          "cycle": 525,
+          "soh": 77,
+          "measuredCapacityAh": 0.847
+        },
+        {
+          "cycle": 540,
+          "soh": 65.5,
+          "measuredCapacityAh": 0.721
+        },
+        {
+          "cycle": 555,
+          "soh": 64,
+          "measuredCapacityAh": 0.704
+        },
+        {
+          "cycle": 570,
+          "soh": 62.5,
+          "measuredCapacityAh": 0.688
+        },
+        {
+          "cycle": 585,
+          "soh": 56.5,
+          "measuredCapacityAh": 0.622
+        },
+        {
+          "cycle": 600,
+          "soh": 52.1,
+          "measuredCapacityAh": 0.574
+        },
+        {
+          "cycle": 615,
+          "soh": 43.2,
+          "measuredCapacityAh": 0.475
+        },
+        {
+          "cycle": 630,
+          "soh": 23.5,
+          "measuredCapacityAh": 0.259
+        },
+        {
+          "cycle": 645,
+          "soh": 15.6,
+          "measuredCapacityAh": 0.171
+        },
+        {
+          "cycle": 660,
+          "soh": 9.2,
+          "measuredCapacityAh": 0.101
+        }
+      ],
+      "soh": 9.2,
+      "rulCycles": -187
+    },
+    {
+      "id": "CALCE_CS2_34",
+      "name": "CALCE_CS2_34 (CALCE University of Maryland)",
+      "sourceName": "CALCE Laboratory Battery Degradation Dataset (University of Maryland)",
+      "sourceType": "Experimental Laboratory Research Dataset",
+      "sourceDescription": "Controlled laboratory cycle aging tests conducted by CALCE researchers on lithium-ion cells at 25°C ambient temperature.",
+      "chemistry": "LCO",
+      "formFactor": "prismatic",
+      "nominalCapacity": "1.1 Ah",
+      "nominalCapacityNumeric": 1.1,
+      "nominalCapacityUnit": "Ah",
+      "cycleCount": 632,
+      "temperatureC": 25,
+      "voltageV": 3.55,
+      "currentA": 0.55,
+      "resistanceMohm": null,
+      "history": [
+        {
+          "cycle": 1,
+          "soh": 103.9,
+          "measuredCapacityAh": 1.143
+        },
+        {
+          "cycle": 15,
+          "soh": 102.5,
+          "measuredCapacityAh": 1.128
+        },
+        {
+          "cycle": 30,
+          "soh": 101.5,
+          "measuredCapacityAh": 1.116
+        },
+        {
+          "cycle": 45,
+          "soh": 100.9,
+          "measuredCapacityAh": 1.11
+        },
+        {
+          "cycle": 60,
+          "soh": 99.8,
+          "measuredCapacityAh": 1.098
+        },
+        {
+          "cycle": 75,
+          "soh": 99.7,
+          "measuredCapacityAh": 1.097
+        },
+        {
+          "cycle": 90,
+          "soh": 98.7,
+          "measuredCapacityAh": 1.086
+        },
+        {
+          "cycle": 105,
+          "soh": 98.2,
+          "measuredCapacityAh": 1.081
+        },
+        {
+          "cycle": 120,
+          "soh": 97.7,
+          "measuredCapacityAh": 1.074
+        },
+        {
+          "cycle": 135,
+          "soh": 97.7,
+          "measuredCapacityAh": 1.075
+        },
+        {
+          "cycle": 150,
+          "soh": 96.7,
+          "measuredCapacityAh": 1.064
+        },
+        {
+          "cycle": 165,
+          "soh": 96.9,
+          "measuredCapacityAh": 1.066
+        },
+        {
+          "cycle": 180,
+          "soh": 96,
+          "measuredCapacityAh": 1.056
+        },
+        {
+          "cycle": 195,
+          "soh": 95.3,
+          "measuredCapacityAh": 1.048
+        },
+        {
+          "cycle": 210,
+          "soh": 95.2,
+          "measuredCapacityAh": 1.047
+        },
+        {
+          "cycle": 225,
+          "soh": 94.4,
+          "measuredCapacityAh": 1.038
+        },
+        {
+          "cycle": 240,
+          "soh": 94.3,
+          "measuredCapacityAh": 1.037
+        },
+        {
+          "cycle": 255,
+          "soh": 94,
+          "measuredCapacityAh": 1.033
+        },
+        {
+          "cycle": 270,
+          "soh": 93.6,
+          "measuredCapacityAh": 1.029
+        },
+        {
+          "cycle": 285,
+          "soh": 93.3,
+          "measuredCapacityAh": 1.026
+        },
+        {
+          "cycle": 300,
+          "soh": 92.4,
+          "measuredCapacityAh": 1.016
+        },
+        {
+          "cycle": 315,
+          "soh": 92.9,
+          "measuredCapacityAh": 1.022
+        },
+        {
+          "cycle": 330,
+          "soh": 92,
+          "measuredCapacityAh": 1.012
+        },
+        {
+          "cycle": 345,
+          "soh": 90.7,
+          "measuredCapacityAh": 0.998
+        },
+        {
+          "cycle": 360,
+          "soh": 88.5,
+          "measuredCapacityAh": 0.974
+        },
+        {
+          "cycle": 375,
+          "soh": 88.2,
+          "measuredCapacityAh": 0.97
+        },
+        {
+          "cycle": 390,
+          "soh": 86.7,
+          "measuredCapacityAh": 0.954
+        },
+        {
+          "cycle": 405,
+          "soh": 84.6,
+          "measuredCapacityAh": 0.931
+        },
+        {
+          "cycle": 420,
+          "soh": 83.1,
+          "measuredCapacityAh": 0.914
+        },
+        {
+          "cycle": 435,
+          "soh": 81.8,
+          "measuredCapacityAh": 0.9
+        },
+        {
+          "cycle": 450,
+          "soh": 79.5,
+          "measuredCapacityAh": 0.874
+        },
+        {
+          "cycle": 465,
+          "soh": 78.6,
+          "measuredCapacityAh": 0.865
+        },
+        {
+          "cycle": 480,
+          "soh": 77.4,
+          "measuredCapacityAh": 0.851
+        },
+        {
+          "cycle": 495,
+          "soh": 73.8,
+          "measuredCapacityAh": 0.812
+        },
+        {
+          "cycle": 510,
+          "soh": 71.6,
+          "measuredCapacityAh": 0.787
+        },
+        {
+          "cycle": 525,
+          "soh": 70.3,
+          "measuredCapacityAh": 0.774
+        },
+        {
+          "cycle": 540,
+          "soh": 69,
+          "measuredCapacityAh": 0.76
+        },
+        {
+          "cycle": 555,
+          "soh": 67.4,
+          "measuredCapacityAh": 0.741
+        },
+        {
+          "cycle": 570,
+          "soh": 64.6,
+          "measuredCapacityAh": 0.71
+        },
+        {
+          "cycle": 585,
+          "soh": 62.4,
+          "measuredCapacityAh": 0.687
+        },
+        {
+          "cycle": 600,
+          "soh": 57.1,
+          "measuredCapacityAh": 0.628
+        },
+        {
+          "cycle": 615,
+          "soh": 52.6,
+          "measuredCapacityAh": 0.578
+        },
+        {
+          "cycle": 630,
+          "soh": 47.6,
+          "measuredCapacityAh": 0.524
+        }
+      ],
+      "soh": 46.9,
+      "rulCycles": -184
+    }
+  ],
+  "evFleetRecords": [
+    {
+      "id": "BATT_00491",
+      "name": "Pack BATT_00491 (LFP 61.5 kWh - VoltaCore Sedan-E1)",
+      "sourceName": "Kaggle EV Battery Health Fleet Research Dataset (ev_battery_health.csv)",
+      "sourceType": "EV Fleet Operational Research Dataset",
+      "sourceDescription": "Collected from real-world electric vehicle operations tracking telemetry across commercial and passenger EV fleets.",
+      "chemistry": "LFP (Lithium Iron Phosphate)",
+      "vehicleModel": "VoltaCore Sedan-E1",
+      "nominalCapacity": "61.5 kWh",
+      "nominalCapacityNumeric": 61.5,
+      "nominalCapacityUnit": "kWh",
+      "cycleCount": 1535,
+      "batteryAgeDays": 662,
+      "soh": 91.81,
+      "rulCycles": 1739,
+      "voltageV": 357.3,
+      "currentA": 176,
+      "resistanceMohm": 49.95,
+      "temperatureC": -7.6,
+      "climateZone": "Cold",
+      "hasHistoricalGraph": false,
+      "history": [
+        {
+          "cycle": 100,
+          "soh": 99.2
+        },
+        {
+          "cycle": 500,
+          "soh": 96.8
+        },
+        {
+          "cycle": 1000,
+          "soh": 94.1
+        },
+        {
+          "cycle": 1535,
+          "soh": 91.8
+        }
+      ]
+    },
+    {
+      "id": "BATT_00011",
+      "name": "Pack BATT_00011 (LFP 73.1 kWh - IonFlux Van-E4)",
+      "sourceName": "Kaggle EV Battery Health Fleet Research Dataset (ev_battery_health.csv)",
+      "sourceType": "EV Fleet Operational Research Dataset",
+      "sourceDescription": "Commercial delivery electric van with 73.1 kWh LFP battery pack in cold climate operations.",
+      "chemistry": "LFP (Lithium Iron Phosphate)",
+      "vehicleModel": "IonFlux Van-E4",
+      "nominalCapacity": "73.1 kWh",
+      "nominalCapacityNumeric": 73.1,
+      "nominalCapacityUnit": "kWh",
+      "cycleCount": 407,
+      "batteryAgeDays": 231,
+      "soh": 97.48,
+      "rulCycles": 3248,
+      "voltageV": 375.4,
+      "currentA": 156.8,
+      "resistanceMohm": 37.9,
+      "temperatureC": 12.3,
+      "climateZone": "Cold",
+      "hasHistoricalGraph": false,
+      "history": [
+        {
+          "cycle": 50,
+          "soh": 99.6
+        },
+        {
+          "cycle": 200,
+          "soh": 98.7
+        },
+        {
+          "cycle": 407,
+          "soh": 97.5
+        }
+      ]
+    },
+    {
+      "id": "BATT_02054",
+      "name": "Pack BATT_02054 (NCA 92.7 kWh - VoltaCore Hatch-E3)",
+      "sourceName": "Kaggle EV Battery Health Fleet Research Dataset (ev_battery_health.csv)",
+      "sourceType": "EV Fleet Operational Research Dataset",
+      "sourceDescription": "High-capacity passenger EV pack tested in hot/arid conditions with moderate degradation.",
+      "chemistry": "NCA (Nickel Cobalt Aluminum)",
+      "vehicleModel": "VoltaCore Hatch-E3",
+      "nominalCapacity": "92.7 kWh",
+      "nominalCapacityNumeric": 92.7,
+      "nominalCapacityUnit": "kWh",
+      "cycleCount": 324,
+      "batteryAgeDays": 520,
+      "soh": 91.86,
+      "rulCycles": 715,
+      "voltageV": 374,
+      "currentA": 159.5,
+      "resistanceMohm": 68.34,
+      "temperatureC": 33.2,
+      "climateZone": "Hot Arid",
+      "hasHistoricalGraph": false,
+      "history": [
+        {
+          "cycle": 50,
+          "soh": 98.4
+        },
+        {
+          "cycle": 150,
+          "soh": 95.2
+        },
+        {
+          "cycle": 324,
+          "soh": 91.9
+        }
+      ]
+    },
+    {
+      "id": "BATT_01748",
+      "name": "Pack BATT_01748 (LMO 48.5 kWh - High Degradation)",
+      "sourceName": "Kaggle EV Battery Health Fleet Research Dataset (ev_battery_health.csv)",
+      "sourceType": "EV Fleet Operational Research Dataset",
+      "sourceDescription": "High-mileage fleet crossover battery near end-of-life condition, demonstrating capacity fade.",
+      "chemistry": "LMO (Lithium Manganese Oxide)",
+      "vehicleModel": "Crossover-X2",
+      "nominalCapacity": "48.5 kWh",
+      "nominalCapacityNumeric": 48.5,
+      "nominalCapacityUnit": "kWh",
+      "cycleCount": 991,
+      "batteryAgeDays": 693,
+      "soh": 80.87,
+      "rulCycles": 0,
+      "voltageV": null,
+      "currentA": 146.4,
+      "resistanceMohm": 92.7,
+      "temperatureC": -4.3,
+      "climateZone": "Cold",
+      "hasHistoricalGraph": false,
+      "history": [
+        {
+          "cycle": 200,
+          "soh": 95.5
+        },
+        {
+          "cycle": 500,
+          "soh": 89.2
+        },
+        {
+          "cycle": 800,
+          "soh": 84.1
+        },
+        {
+          "cycle": 991,
+          "soh": 80.9
+        }
+      ]
+    }
+  ]
+}

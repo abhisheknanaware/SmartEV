@@ -1,0 +1,174 @@
+{
+  "created": "2026-10-23T15:33:26+00:00",
+  "target": "SOH, % of the cell's initial capacity",
+  "features": [
+    "cycle_number",
+    "chem_LFP",
+    "chem_NMC",
+    "chem_NCA",
+    "chem_LCO",
+    "ambient_temp_C",
+    "max_charge_rate_C",
+    "max_discharge_rate_C"
+  ],
+  "monotone_constraints": {
+    "cycle_number": -1,
+    "chem_LFP": 0,
+    "chem_NMC": 0,
+    "chem_NCA": 0,
+    "chem_LCO": 0,
+    "ambient_temp_C": 0,
+    "max_charge_rate_C": 0,
+    "max_discharge_rate_C": 0
+  },
+  "training": {
+    "rows": 51200,
+    "cells": 320,
+    "cells_by_source": {
+      "CALCE": 13,
+      "HUST": 77,
+      "MATR": 169,
+      "SNL": 61
+    },
+    "cells_by_chemistry": {
+      "LCO": 13,
+      "LFP": 264,
+      "NCA": 22,
+      "NMC": 21
+    }
+  },
+  "evaluation": {
+    "protocol": "5-fold GroupKFold by cell (held-out cells)",
+    "model": {
+      "rmse": 4.473262066753058,
+      "mae": 2.6966458074189985,
+      "r2": 0.7325778290190184
+    },
+    "baseline_cycles_chemistry_only": {
+      "rmse": 5.341773043689967,
+      "mae": 3.369014193195718,
+      "r2": 0.6186536532488204
+    },
+    "band_10_90": [
+      {
+        "max_cycle": 100,
+        "lo": -1.7817951418450093,
+        "hi": 1.0331307061797617
+      },
+      {
+        "max_cycle": 300,
+        "lo": -2.3369266440549574,
+        "hi": 1.642600682154851
+      },
+      {
+        "max_cycle": 700,
+        "lo": -5.688448289243211,
+        "hi": 4.178553715429793
+      },
+      {
+        "max_cycle": 1500,
+        "lo": -6.218430968084031,
+        "hi": 5.869071821402289
+      },
+      {
+        "max_cycle": 1000000000.0,
+        "lo": -4.1445010687403805,
+        "hi": 4.568848802989994
+      }
+    ],
+    "band_coverage_on_heldout_residuals": 0.799921875,
+    "by_chemistry": {
+      "LFP": {
+        "rmse": 4.369523955328171,
+        "mae": 2.620684847200629,
+        "r2": 0.6215257990825198
+      },
+      "NMC": {
+        "rmse": 2.566454743218872,
+        "mae": 2.009237824764608,
+        "r2": 0.8517141596408737
+      },
+      "NCA": {
+        "rmse": 5.261705594926884,
+        "mae": 3.3086828352240003,
+        "r2": 0.731099122539514
+      },
+      "LCO": {
+        "rmse": 6.879947319238256,
+        "mae": 4.313910924471436,
+        "r2": 0.7451000464847467
+      }
+    }
+  },
+  "support": {
+    "LFP": {
+      "cells": 264,
+      "ambient_temp_C": [
+        15.0,
+        25.0,
+        30.0,
+        35.0
+      ],
+      "max_charge_rate_C": [
+        0.5,
+        8.0
+      ],
+      "max_discharge_rate_C": [
+        0.5,
+        5.0
+      ],
+      "max_cycles": 4565
+    },
+    "NMC": {
+      "cells": 21,
+      "ambient_temp_C": [
+        15.0,
+        25.0,
+        35.0
+      ],
+      "max_charge_rate_C": [
+        0.5,
+        0.5
+      ],
+      "max_discharge_rate_C": [
+        0.5,
+        3.0
+      ],
+      "max_cycles": 1321
+    },
+    "NCA": {
+      "cells": 22,
+      "ambient_temp_C": [
+        15.0,
+        25.0,
+        35.0
+      ],
+      "max_charge_rate_C": [
+        0.5,
+        0.5
+      ],
+      "max_discharge_rate_C": [
+        0.5,
+        2.0
+      ],
+      "max_cycles": 1509
+    },
+    "LCO": {
+      "cells": 13,
+      "ambient_temp_C": [
+        25.0
+      ],
+      "max_charge_rate_C": [
+        0.5,
+        0.5
+      ],
+      "max_discharge_rate_C": [
+        0.5,
+        1.0
+      ],
+      "max_cycles": 1563
+    }
+  },
+  "lightgbm": "4.6.0",
+  "seed": 20261023
+}

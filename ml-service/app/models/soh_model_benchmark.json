@@ -1,0 +1,204 @@
+{
+  "protocol": "5-fold GroupKFold by cell (whole cells held out); same data as the production simulator",
+  "rows": 51200,
+  "cells": 320,
+  "device_for_deep_learning": "cuda",
+  "selection_rule": "lowest held-out RMSE among models whose curves never rise with cycles",
+  "best_overall": "Extra Trees",
+  "best_monotone": "HistGradientBoosting (monotone)",
+  "results": [
+    {
+      "name": "Extra Trees",
+      "family": "Bagging ensemble",
+      "mae": 2.551464910203307,
+      "rmse": 4.401885307188759,
+      "r2": 0.7410438848226115,
+      "by_chemistry_mae": {
+        "LFP": 2.4806832887716803,
+        "NMC": 1.910408927567222,
+        "NCA": 3.102535929790967,
+        "LCO": 4.091846545770905
+      },
+      "fit_seconds": 0.293049999998766,
+      "predict_ms_per_1k": 7.678589844033468,
+      "monotonic_violation_rate": 0.5,
+      "train_subsample": null
+    },
+    {
+      "name": "HistGradientBoosting (monotone)",
+      "family": "Boosting",
+      "mae": 2.667995818682201,
+      "rmse": 4.462838740185645,
+      "r2": 0.7338226391949425,
+      "by_chemistry_mae": {
+        "LFP": 2.589836517804667,
+        "NMC": 1.9371362220903954,
+        "NCA": 3.362480717896275,
+        "LCO": 4.260568063096611
+      },
+      "fit_seconds": 1.5158817600022303,
+      "predict_ms_per_1k": 3.328814453027462,
+      "monotonic_violation_rate": 0.0,
+      "train_subsample": null
+    },
+    {
+      "name": "LightGBM (monotone)",
+      "family": "Boosting",
+      "mae": 2.6966458074189985,
+      "rmse": 4.473262066753058,
+      "r2": 0.7325778290190184,
+      "by_chemistry_mae": {
+        "LFP": 2.620684847200629,
+        "NMC": 2.009237824764608,
+        "NCA": 3.3086828352240003,
+        "LCO": 4.313910924471436
+      },
+      "fit_seconds": 0.7396614199999021,
+      "predict_ms_per_1k": 4.860974609357527,
+      "monotonic_violation_rate": 0.0,
+      "train_subsample": null
+    },
+    {
+      "name": "Random Forest",
+      "family": "Bagging ensemble",
+      "mae": 2.574729252378501,
+      "rmse": 4.521387926799737,
+      "r2": 0.726792720658608,
+      "by_chemistry_mae": {
+        "LFP": 2.4870760407765156,
+        "NMC": 1.9182405741602988,
+        "NCA": 3.3606135084216326,
+        "LCO": 4.085287442575234
+      },
+      "fit_seconds": 0.607654900001944,
+      "predict_ms_per_1k": 5.633515625333985,
+      "monotonic_violation_rate": 0.5666666666666667,
+      "train_subsample": null
+    },
+    {
+      "name": "XGBoost (monotone)",
+      "family": "Boosting",
+      "mae": 2.7250795384909647,
+      "rmse": 4.531236301838956,
+      "r2": 0.7256012378019701,
+      "by_chemistry_mae": {
+        "LFP": 2.638697029413936,
+        "NMC": 2.013235747414875,
+        "NCA": 3.438809830652145,
+        "LCO": 4.421359198597682
+      },
+      "fit_seconds": 3.228440479998244,
+      "predict_ms_per_1k": 5.298535155873196,
+      "monotonic_violation_rate": 0.0,
+      "train_subsample": null
+    },
+    {
+      "name": "CatBoost (monotone)",
+      "family": "Boosting",
+      "mae": 3.0072037914682697,
+      "rmse": 4.632134149086925,
+      "r2": 0.7132450110238927,
+      "by_chemistry_mae": {
+        "LFP": 2.9767514572891853,
+        "NMC": 2.0261186808532154,
+        "NCA": 3.4486956837110085,
+        "LCO": 4.463310092764755
+      },
+      "fit_seconds": 4.9582010000012815,
+      "predict_ms_per_1k": 0.4997617185154013,
+      "monotonic_violation_rate": 0.0,
+      "train_subsample": null
+    },
+    {
+      "name": "MLP neural network",
+      "family": "Deep learning",
+      "mae": 2.9034867303377325,
+      "rmse": 4.84539116295127,
+      "r2": 0.686233616723867,
+      "by_chemistry_mae": {
+        "LFP": 2.815544911952642,
+        "NMC": 2.311157500583163,
+        "NCA": 3.5702391835272795,
+        "LCO": 4.517871338671566
+      },
+      "fit_seconds": 2.92434487999999,
+      "predict_ms_per_1k": 0.20844921920115667,
+      "monotonic_violation_rate": 0.0,
+      "train_subsample": null
+    },
+    {
+      "name": "Support Vector Regression (RBF)",
+      "family": "Kernel",
+      "mae": 2.5879410760714006,
+      "rmse": 4.924380091988911,
+      "r2": 0.6759202764501433,
+      "by_chemistry_mae": {
+        "LFP": 2.482057245417461,
+        "NMC": 2.0843115731519593,
+        "NCA": 3.466099391018144,
+        "LCO": 4.0656386087729315
+      },
+      "fit_seconds": 1.2281860199989751,
+      "predict_ms_per_1k": 229.80445117184445,
+      "monotonic_violation_rate": 0.3333333333333333,
+      "train_subsample": 8000
+    },
+    {
+      "name": "k-Nearest Neighbours",
+      "family": "Instance-based",
+      "mae": 2.7572659775915374,
+      "rmse": 4.942045051448933,
+      "r2": 0.6735909991396292,
+      "by_chemistry_mae": {
+        "LFP": 2.723709043976626,
+        "NMC": 1.927195956181049,
+        "NCA": 3.139436355376453,
+        "LCO": 4.132862332413749
+      },
+      "fit_seconds": 0.036901659998693506,
+      "predict_ms_per_1k": 10.438169921940244,
+      "monotonic_violation_rate": 0.5333333333333333,
+      "train_subsample": null
+    },
+    {
+      "name": "Ridge (physics features)",
+      "family": "Linear",
+      "mae": 3.1705085208401336,
+      "rmse": 4.998729602674717,
+      "r2": 0.6660603282616182,
+      "by_chemistry_mae": {
+        "LFP": 3.010945186025212,
+        "NMC": 2.9208332697709367,
+        "NCA": 4.383229049011563,
+        "LCO": 4.761896908826359
+      },
+      "fit_seconds": 0.04155731999780983,
+      "predict_ms_per_1k": 0.7063749998792446,
+      "monotonic_violation_rate": 0.4,
+      "train_subsample": null
+    },
+    {
+      "name": "Physics-informed NN (power-law fade)",
+      "family": "Deep learning",
+      "mae": 2.6964177378184906,
+      "rmse": 5.054732505119459,
+      "r2": 0.658535875727446,
+      "by_chemistry_mae": {
+        "LFP": 2.6358130615358375,
+        "NMC": 2.000442860434551,
+        "NCA": 3.184723229078064,
+        "LCO": 4.225062826739454
+      },
+      "fit_seconds": 2.2356744399992747,
+      "predict_ms_per_1k": 0.21725585952481197,
+      "monotonic_violation_rate": 0.0,
+      "train_subsample": null
+    }
+  ],
+  "tie_tolerance_rmse": 0.05,
+  "tied_with_best_monotone": [
+    "HistGradientBoosting (monotone)",
+    "LightGBM (monotone)"
+  ],
+  "in_production": "LightGBM (monotone)"
+}

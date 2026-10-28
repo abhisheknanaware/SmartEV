@@ -1,0 +1,175 @@
+{
+  "experiment_protocol": "Cell-Separated Holdout Benchmark (Zero Data Leakage)",
+  "dataset": "CALCE Prismatic Cells (master_dataset.csv text portion)",
+  "total_cells": 11,
+  "total_cycles": 10600,
+  "split_design": {
+    "train_cells": [
+      "CALCE_CS2_33",
+      "CALCE_CS2_34",
+      "CALCE_CS2_35",
+      "CALCE_CX2_16",
+      "CALCE_CX2_33",
+      "CALCE_CX2_34"
+    ],
+    "train_cycles": 5950,
+    "val_cells": [
+      "CALCE_CS2_36",
+      "CALCE_CX2_35"
+    ],
+    "val_cycles": 2283,
+    "cal_cells": [
+      "CALCE_CS2_37"
+    ],
+    "cal_cycles": 905,
+    "test_cells": [
+      "CALCE_CS2_38",
+      "CALCE_CX2_36"
+    ],
+    "test_cycles": 1462
+  },
+  "model_benchmarks_on_unseen_cells": {
+    "Dummy (Mean Baseline)": {
+      "rmse_pct_pts": 17.169,
+      "mae_pct_pts": 12.2817,
+      "r2_score": -0.0031,
+      "train_time_s": 0.059,
+      "inference_latency_ms": 0.0
+    },
+    "Ridge Regression": {
+      "rmse_pct_pts": 3.0449,
+      "mae_pct_pts": 1.913,
+      "r2_score": 0.9684,
+      "train_time_s": 0.035,
+      "inference_latency_ms": 0.0021
+    },
+    "Random Forest (50 Trees)": {
+      "rmse_pct_pts": 2.6286,
+      "mae_pct_pts": 1.8844,
+      "r2_score": 0.9765,
+      "train_time_s": 2.62,
+      "inference_latency_ms": 0.0109
+    },
+    "Gradient Boosting (GBDT)": {
+      "rmse_pct_pts": 2.3401,
+      "mae_pct_pts": 1.7024,
+      "r2_score": 0.9814,
+      "train_time_s": 5.131,
+      "inference_latency_ms": 0.0036
+    },
+    "LightGBM (Champion)": {
+      "rmse_pct_pts": 1.879,
+      "mae_pct_pts": 1.3947,
+      "r2_score": 0.988,
+      "train_time_s": 0.394,
+      "inference_latency_ms": 0.0187
+    },
+    "XGBoost": {
+      "rmse_pct_pts": 1.9946,
+      "mae_pct_pts": 1.3701,
+      "r2_score": 0.9865,
+      "train_time_s": 2.415,
+      "inference_latency_ms": 0.008
+    }
+  },
+  "lightgbm_seed_variability_5_seeds": {
+    "seeds_tested": [
+      42,
+      101,
+      2024,
+      777,
+      999
+    ],
+    "rmse_mean": 1.879,
+    "rmse_std": 0.0,
+    "mae_mean": 1.3947,
+    "mae_std": 0.0,
+    "r2_mean": 0.988,
+    "r2_std": 0.0,
+    "seed_runs": [
+      {
+        "seed": 42,
+        "rmse": 1.8789551999549152,
+        "mae": 1.394731109975347,
+        "r2": 0.9879858335962842
+      },
+      {
+        "seed": 101,
+        "rmse": 1.8789551999549152,
+        "mae": 1.394731109975347,
+        "r2": 0.9879858335962842
+      },
+      {
+        "seed": 2024,
+        "rmse": 1.8789551999549152,
+        "mae": 1.394731109975347,
+        "r2": 0.9879858335962842
+      },
+      {
+        "seed": 777,
+        "rmse": 1.8789551999549152,
+        "mae": 1.394731109975347,
+        "r2": 0.9879858335962842
+      },
+      {
+        "seed": 999,
+        "rmse": 1.8789551999549152,
+        "mae": 1.394731109975347,
+        "r2": 0.9879858335962842
+      }
+    ]
+  },
+  "feature_ablation_study": {
+    "Config 1 (Curve-Only, 9 feats)": {
+      "rmse": 2.8741,
+      "mae": 2.0084,
+      "r2": 0.9719,
+      "num_features": 9
+    },
+    "Config 2 (Curve + Context, 21 feats)": {
+      "rmse": 1.879,
+      "mae": 1.3947,
+      "r2": 0.988,
+      "num_features": 21
+    },
+    "Config 3 (Full-Cycle Benchmark, 27 feats)": {
+      "rmse": 1.9093,
+      "mae": 1.4082,
+      "r2": 0.9876,
+      "num_features": 27
+    }
+  },
+  "conformal_quantile_regression_cqr": {
+    "nominal_coverage": 0.9,
+    "empirical_coverage": 0.8516,
+    "conformal_adjustment_q": 1.4081,
+    "mean_interval_width_pct_pts": 6.512,
+    "median_interval_width_pct_pts": 6.399,
+    "calibration_cell": "CALCE_CS2_37",
+    "calibration_samples": 905,
+    "test_cells": [
+      "CALCE_CS2_38",
+      "CALCE_CX2_36"
+    ],
+    "test_samples": 1462,
+    "per_cell_breakdown": {
+      "CALCE_CS2_38": {
+        "samples": 903,
+        "empirical_coverage": 0.7641,
+        "mean_interval_width": 7.014,
+        "median_interval_width": 7.251
+      },
+      "CALCE_CX2_36": {
+        "samples": 559,
+        "empirical_coverage": 0.9928,
+        "mean_interval_width": 5.702,
+        "median_interval_width": 5.602
+      }
+    }
+  },
+  "generated_figures": [
+    "C:\\Users\\Admin\\.gemini\\antigravity-ide\\brain\\f5f4591f-7d13-4b28-9e4d-feaa9f94b6b8\\benchmark_figures\\fig1_unseen_cell_parity.png",
+    "C:\\Users\\Admin\\.gemini\\antigravity-ide\\brain\\f5f4591f-7d13-4b28-9e4d-feaa9f94b6b8\\benchmark_figures\\fig2_cqr_prediction_intervals.png",
+    "C:\\Users\\Admin\\.gemini\\antigravity-ide\\brain\\f5f4591f-7d13-4b28-9e4d-feaa9f94b6b8\\benchmark_figures\\fig3_model_benchmark_bars.png"
+  ]
+}
